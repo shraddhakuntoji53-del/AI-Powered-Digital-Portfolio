@@ -30,3 +30,14 @@ It showcases projects, technical skills, and achievements, and includes a backen
 ---
 
 ## 🧩 Folder Structure
+DigitalPortfolioAI/
+├── app.py # FastAPI backend
+├── index.html # Frontend UI
+├── requirements.txt # Dependencies
+└── render.yaml # (Optional) Render deployment config
+
+📧 Contact
+
+👩‍💻 Developer: Shraddha K
+📬 [shraddhakuntojifeb15@gmail.com]
+
