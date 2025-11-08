@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shraddha K. — Digital Portfolio</title>
+  <meta name="description" content="Portfolio of Shraddha Kuntoji — projects, skills, contact and resume." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#6ee7b7; --glass:rgba(255,255,255,0.04);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#071025);color:#e6eef6;line-height:1.5}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar{width:60px;height:60px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#34d399);display:grid;place-items:center;font-weight:800;color:#072018}
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .cta{background:var(--accent);color:#022;padding:10px 14px;border-radius:10px;font-weight:700}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center;margin-top:28px}
+    .hero h1{margin:0;font-size:clamp(24px,4vw,36px)}
+    .hero p{color:var(--muted);margin:12px 0}
+    .hero .actions{display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn.primary{background:var(--accent);color:#022}
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 8px 30px rgba(4,7,15,0.6)}
+
+    /* Projects */
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
+    .project{border-radius:10px;overflow:hidden;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);display:flex;flex-direction:column}
+    .project img{width:100%;height:160px;object-fit:cover;display:block}
+    .project .body{padding:12px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .tag{background:var(--glass);padding:6px 8px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    /* Skills */
+    .skills{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .skill{background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);padding:8px 10px;border-radius:8px}
+
+    /* Contact */
+    footer{margin-top:28px;padding:18px;border-radius:12px}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">SK</div>
+        <div>
+          <div style="font-weight:800">Shraddha Kuntoji</div>
+          <div style="font-size:13px;color:var(--muted)">Computer Science · Web Developer · Student</div>
+        </div>
+      </div>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div><a class="cta" href="#contact">Hire / Connect</a></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Hi — I'm Shraddha. I build web apps, algorithms, and data-driven projects.</h1>
+          <p>I’m a Computer Science student focused on algorithms, web development, and applied machine learning. Here are some projects and work I’ve done.</p>
+          <div class="actions">
+            <button class="btn primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
+            <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
+            <a class="btn" href="#resume">Download CV</a>
+          </div>
+
+          <div style="margin-top:18px">
+            <div style="font-weight:700">Featured:</div>
+            <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+              <div class="tag">Dijkstra Visualizer</div>
+              <div class="tag">Bank Management System</div>
+              <div class="tag">IIoT Smart Factory</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card" aria-hidden>
+          <div style="font-weight:700;margin-bottom:12px">Contact</div>
+          <div style="color:var(--muted);font-size:14px">Email: <a href="mailto:shraddhakuntojifeb15@gmail.com" style="color:var(--accent);text-decoration:none">shraddhakuntojifeb15@gmail.com</a></div>
+          <div style="margin-top:10px;color:var(--muted)">Location: India</div>
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)">Open to internships and freelance projects.</div>
+        </aside>
+      </section>
+
+      <section id="projects">
+        <h2 style="margin-top:18px">Projects</h2>
+        <p style="color:var(--muted);margin:6px 0 12px">Selected projects with descriptions and links (demo / code).</p>
+
+        <div class="projects">
+          <article class="project">
+            <img src="https://images.unsplash.com/photo-1526378721348-6f3a1b9a7b4b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="Dijkstra visualizer screenshot">
+            <div class="body">
+              <h3 style="margin:0">Dijkstra Visualizer</h3>
+              <p style="color:var(--muted);margin:8px 0">An interactive visualization of shortest-path algorithms with step-by-step controls.</p>
+              <div class="tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Pathfinding</span>
+                <span class="tag">React</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=ef01" alt="Bank management system">
+            <div class="body">
+              <h3 style="margin:0">Bank Management System</h3>
+              <p style="color:var(--muted);margin:8px 0">ER-based system implementing customer, account, loan and transaction management (SQL + Java).</p>
+              <div class="tags">
+                <span class="tag">MySQL</span>
+                <span class="tag">Java</span>
+                <span class="tag">ER Design</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=gh23" alt="IIoT smart factory dashboard">
+            <div class="body">
+              <h3 style="margin:0">IIoT Smart Factory Dashboard</h3>
+              <p style="color:var(--muted);margin:8px 0">A dashboard for smart manufacturing monitoring using simulated sensor data and alerts.</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">Data Viz</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2 style="margin-top:18px">Skills</h2>
+        <div style="color:var(--muted);margin-top:8px">Tools and technologies I use frequently.</div>
+        <div class="skills">
+          <div class="skill">C / C++</div>
+          <div class="skill">Java</div>
+          <div class="skill">Python</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">HTML & CSS</div>
+          <div class="skill">SQL</div>
+          <div class="skill">Machine Learning</div>
+        </div>
+      </section>
+
+      <section id="resume">
+        <h2 style="margin-top:18px">Resume</h2>
+        <p style="color:var(--muted);margin:6px 0 12px">Download a PDF version of my resume.</p>
+        <a class="btn primary" href="#" onclick="alert('Demo: download resume')">Download CV (PDF)</a>
+      </section>
+
+      <section id="contact">
+        <h2 style="margin-top:18px">Contact</h2>
+        <p style="color:var(--muted);margin:6px 0 12px">Send a message or connect on LinkedIn / GitHub.</p>
+        <form id="contactForm" style="display:grid;gap:10px;max-width:720px">
+        <input name="name" required placeholder="Your name">
+        <input name="email" required type="email" placeholder="Email">
+        <textarea name="message" placeholder="Message" rows="4"></textarea>
+        <div style="display:flex;justify-content:flex-end">
+        <button class="btn primary" type="submit">Send</button>
+        </div>
+        </form>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const response = await fetch("/contact", { method: "POST", body: formData });
+  const result = await response.json();
+  alert(result.message);
+});
+</script>
+
+      </section>
+
+    </main>
+
+    <footer style="margin-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <div style="font-weight:700">Shraddha K.</div>
+      <div style="color:var(--muted)">© 2025 — Built with ❤️</div>
+      <div style="display:flex;gap:10px">
+        <a href="#" style="color:var(--muted);text-decoration:none">LinkedIn</a>
+        <a href="#" style="color:var(--muted);text-decoration:none">GitHub</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
